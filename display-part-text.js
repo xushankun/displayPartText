@@ -43,6 +43,7 @@ Component({
       this.setData({
         isShowAllText: _isShowAllText
       })
+      this.triggerEvent("actionHandle", _isShowAllText)
     },
     ctrlShowText(){
       let _textLineHeight = this.data.textLineHeight, _lineNumber = this.data.lineNumber, 
@@ -60,7 +61,7 @@ Component({
         initTextClass: `${this.data.initTextClass};max-height:none;overflow:inherit;`,
         showAllClass: `${this.data.initTextClass}`
       })
-    },
+    }
   },
   attached(){
     this.ctrlShowText()
